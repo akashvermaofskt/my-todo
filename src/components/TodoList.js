@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import TodoItem from './TodoItem'
+import "./comp.css"
 
 class TodoList extends Component{
     
     render(){
-        console.log(this.props)
         return (
-            <div>
+            <div> 
                 <div>List of todos:</div>
                 <ul className="todo_list">
                 {

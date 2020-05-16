@@ -19,28 +19,17 @@ class TodoItem extends Component {
     handleDelete(){
         this.props.actions.deleteTodo(this.props.todo.id)
     }
-
-
-
-    handleTitleChange(event){
-        this.setState({
-            title: event.target.value
-        })
-    }
+    
 
 
     render(){
         return (
-            <li className="todo__item">
+            <li className="todo_item">
                 <input type="checkbox"
                     defaultChecked={this.state.completed}
                     required={true}
                     onClick={this.handleComplete.bind(this)}/>
-                <input type="text"
-                    onChange={this.handleTitleChange.bind(this)}
-                    required={true}
-                    placeholder='title'
-                    value={this.state.title}/>
+                <span className="title">{this.state.title}</span>
                 <button onClick=
                     {this.handleDelete.bind(this)}>Delete</button>
             </li>

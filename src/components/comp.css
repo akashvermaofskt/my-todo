@@ -1,0 +1,12 @@
+ul {
+    margin: auto;
+    list-style: none;
+}
+
+li{
+    margin: 10px;
+}
+
+.title{
+    margin: 50px;
+}

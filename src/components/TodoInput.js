@@ -9,7 +9,6 @@ class TodoInput extends Component{
     }
 
     handleTitleChange(event){
-        console.log(event);
         this.setState({
             title: event.target.value
         })
@@ -17,8 +16,6 @@ class TodoInput extends Component{
 
     handleSubmit(event){
         event.preventDefault();
-        console.log(this.state.title)
-        console.log(this.props)
         if(this.state.title !== ''){
             this.props.addTodo(this.state.title)
             //reset input box
@@ -31,7 +28,7 @@ class TodoInput extends Component{
     render(){
         return (
             <div className="todo_input">
-                <div className="title">
+                <div>
                     <input
                         type="text"
                         placeholder="title.."
